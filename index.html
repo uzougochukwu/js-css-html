@@ -111,90 +111,60 @@ void search(char pat[], char txt[], int q)
 															<img src="images/pic03.jpg" alt="" />
 														</div>
 													</section>
-
-
-						<!-- Panel -->
-						<section class="panel color4-alt">
-							<div class="intro color4">
+						<!-- Panel (Spotlight) -->
+						<section class="panel spotlight large left">
+							<div class="content span-5">
 								<h2 class="major">Rabin Karp continued</h2>
-								<p>
-									<figure>
-										<code>
-											<pre>
-									
+								<p><figure>
+									<code>
+										<pre>
+								
 
-									for (i = 0; i <= N - M; i++)
+								for (i = 0; i <= N - M; i++)
+								{
+									if (p == t)
 									{
-										if (p == t)
+										for (j = 0; j < M; j++)
 										{
-											for (j = 0; j < M; j++)
+											if (txt[i + j] != pat[j])
 											{
-												if (txt[i + j] != pat[j])
-												{
-													break;
-												}
+												break;
 											}
-								
-											if ( j==M)
-												cout << "Pattern found at index " << i
-													<< endl;
 										}
-								
-										if (i < N - M)
-										{
-											t = (d * (t - txt[i] * h) + txt[i + M]) % q;
-								
-											if (t<0)
-												t = (t+q);
-										}
+							
+										if ( j==M)
+											cout << "Pattern found at index " << i
+												<< endl;
+									}
+							
+									if (i < N - M)
+									{
+										t = (d * (t - txt[i] * h) + txt[i + M]) % q;
+							
+										if (t<0)
+											t = (t+q);
 									}
 								}
-								
-								int main()
-								{
-									char txt[] = "GEEKS FOR GEEKS";
-									char pat[] = "GEEK";
-								
-									int q = INT_MAX;
-								
-									search(pat, txt, q);
-									return 0;
-								}
-							</code>
-						</pre>
-						</code>
-						<figure>							
+							}
 							
-							</p>
+							int main()
+							{
+								char txt[] = "GEEKS FOR GEEKS";
+								char pat[] = "GEEK";
+							
+								int q = INT_MAX;
+							
+								search(pat, txt, q);
+								return 0;
+							}
+							
+						</code>
+					</pre>
+					</code>
+					<figure>	</p>
 							</div>
-							<div class="inner columns divided">
-								<div class="span-3-25">
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="email" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="4"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="button primary" /></li>
-										</ul>
-									</form>
-								</div>
-								<div class="span-1-5">
-									<ul class="contact-icons color1">
-										<li class="icon brands fa-linkedin"><a href="#">https://www.linkedin.com/in/uzo-ugochukwu-1a5001174/</a></li>
-										<li class="icon brands fa-github"><a href="#">https://github.com/uzougochukwu</a></li>
-									</ul>
-								</div>
+							<div class="image filtered tinted" data-position="top right">
+								<img src="images/pic03.jpg" alt="" />
 							</div>
 						</section>
 
